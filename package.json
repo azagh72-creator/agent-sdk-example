@@ -1,0 +1,16 @@
+{
+  "name": "agent-sdk-example",
+  "version": "1.0.0",
+  "description": "Example agent using @zaghmout/agent-sdk — FW_ETL_v1.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx agent.ts"
+  },
+  "dependencies": {
+    "@zaghmout/agent-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}
