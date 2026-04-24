@@ -1,5 +1,5 @@
 /**
- * Example Agent — @zaghmout/agent-sdk
+ * Example Agent — @fwgate/sdk
  *
  * Demonstrates the full guard() flow:
  *   intent → verify → execute → attest → proof
@@ -7,7 +7,7 @@
  * Run: npx tsx agent.ts
  */
 
-import { epc1 } from '@zaghmout/agent-sdk';
+import { epc1 } from '@fwgate/sdk';
 
 // ── Simulated on-chain execution ──────────────────────────────────────────────
 // In production: replace with your actual DEX swap / contract call.
@@ -25,7 +25,7 @@ async function run() {
   const intent = { action: 'swap 100 STX → ALEX' };
 
   console.log('──────────────────────────────────────────');
-  console.log('  Flying Whale Agent SDK — Example');
+  console.log('  @fwgate/sdk — Flying Whale Agent Example');
   console.log('──────────────────────────────────────────\n');
 
   console.log('Intent:', intent.action);
@@ -54,6 +54,7 @@ async function run() {
     console.log('  signature:      ', result.attest.signature.slice(0, 32) + '...');
     console.log('  proof_url:      ', result.attest.proof_url);
     console.log('  issuer:         ', result.attest.issuer);
+    console.log('  node_id:        ', result.attest.node_id ?? 'n/a');
   }
 
   console.log('\n──────────────────────────────────────────');
